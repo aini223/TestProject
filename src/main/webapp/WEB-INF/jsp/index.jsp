@@ -17,11 +17,11 @@
 	<form id="form1">
 		<table>
 			<tr>
-				<td>userName</td>
+				<td>user</td>
 				<td><input type="text" id="name" name="name"></td>
 			</tr>
 			<tr>
-				<td>password</td>
+				<td>pwd</td>
 				<td><input type="password" id="psw" name="psw"></td>
 			</tr>
 			<tr>
@@ -31,6 +31,7 @@
 		<span id="sp"></span>
 	</form>
 	<input type="button" value="按钮一号">
+	<input type="button" id="btn" value="按钮">
 </body>
 <script>
 	$("#login").click(function() {
@@ -52,6 +53,15 @@
 				}
 			}
 		})
+	})
+	
+	$("#btn").click(function(){
+		var v =$("#btn").val();
+		if(v == "按钮"){
+			$("#btn").val("anniu");
+		}else{
+			$("#btn").val("按钮");
+		}
 	})
 </script>
 </html>

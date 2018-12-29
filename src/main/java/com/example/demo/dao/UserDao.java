@@ -19,5 +19,7 @@ public interface UserDao{
     void updateLastLoginTime(@Param("date")Date date ,@Param("id")Integer id);
     
     void updateWrongCountZero(@Param("id")Integer id);
+    
+    
 }
 
