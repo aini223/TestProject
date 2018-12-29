@@ -1,19 +1,16 @@
 package com.example.demo.model;
 
+import java.util.Date;
+
 public class User{
 
     private int userid;
     private String userName;
     private String sex;
     private String password;
+    private int wrong_count;
+    private Date last_login_time;
     public User(){
-    }
-    public User(int userid, String userName, String sex, String password){
-        super();
-        this.userid = userid;
-        this.userName = userName;
-        this.sex = sex;
-        this.password = password;
     }
     
     public int getUserid(){
@@ -47,10 +44,35 @@ public class User{
     public void setPassword(String password){
         this.password = password;
     }
+
+    
+    public int getWrong_count(){
+        return wrong_count;
+    }
+
+    
+    public void setWrong_count(int wrong_count){
+        this.wrong_count = wrong_count;
+    }
+
+    
+    public Date getLast_login_time(){
+        return last_login_time;
+    }
+
+    
+    public void setLast_login_time(Date last_login_time){
+        this.last_login_time = last_login_time;
+    }
+
     @Override
     public String toString(){
-        return "User [userid=" + userid + ", userName=" + userName + ", sex=" + sex + ", password=" + password + "]";
+        return "User [userid=" + userid + ", userName=" + userName + ", sex=" + sex + ", password=" + password + ", wrong_count=" + wrong_count + ", last_login_time=" + last_login_time + "]";
     }
+
+
+    
+    
     
     
     

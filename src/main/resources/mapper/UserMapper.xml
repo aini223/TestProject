@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.example.demo.dao.UserDao" >
+<mapper namespace="com.example.demo.dao.UserDao">
 
-    <select id="getUserById"  resultType="User">
-        SELECT * FROM user WHERE userid = #{id}
-    </select>
-    
-    <select id="getUserByName" resultType="User">
-    	select * from member where username = #{name}
-    </select>
+	<select id="getUserById" resultType="User">
+		SELECT * FROM user WHERE userid = #{id}
+	</select>
+
+	<select id="getUserByName" resultType="User">
+		select * from member where username = #{name}
+	</select>
+
+	<select id="updateWrongCount" resultType="User">
+		update member set wrong_count = #{count},last_login_time = #{date} where userid = #{id}
+	</select>
+
+	<select id="updateLastLoginTime" resultType="User">
+		update member set last_login_time = #{date} where userid = #{id}
+	</select>
+	
+	<select id="updateWrongCountZero" resultType="User">
+		update member set wrong_count = 0 where userid = #{id}
+	</select>
 
 </mapper>

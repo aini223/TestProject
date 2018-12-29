@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
 @EnableTransactionManagement
-@ComponentScan(basePackages={"com.example.demo.controller,com.example.demo.dao,com.example.demo.model,com.example.demo.manager"})
+@ComponentScan(basePackages={"com.example.demo.controller,com.example.demo.dao,com.example.demo.model,com.example.demo.manager,com.example.demo.config"})
 @MapperScan("com.example.demo.dao")
 public class DemoApplication {
 
