@@ -30,6 +30,7 @@
 		</table>
 		<span id="sp"></span>
 	</form>
+	<input type="button" value="按钮一号">
 </body>
 <script>
 	$("#login").click(function() {
