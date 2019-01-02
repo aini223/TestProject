@@ -20,6 +20,6 @@ public interface UserDao{
     
     void updateWrongCountZero(@Param("id")Integer id);
     
-    
+    void logout(String name);
 }
 
